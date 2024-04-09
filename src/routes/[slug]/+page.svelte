@@ -1,9 +1,12 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
+	import ReadingProgress from '$lib/components/reading-progress.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
 </script>
+
+<ReadingProgress />
 
 <time datetime={data.post?.attributes.date} class="text-gray-400 text-sm inline-block mb-1">
 	{new Date(data.post?.attributes.date).toLocaleDateString('en-US', {
@@ -13,7 +16,7 @@
 	})}
 </time>
 
-<article class="prose prose-lg prose-gray dark:prose-invert">
+<article class="prose prose-lg prose-gray dark:prose-invert" id="article">
 	<h2>
 		{data.post?.attributes.title}
 	</h2>
