@@ -7,3 +7,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	@apply max-w-prose px-5 py-10 md:py-16 mx-auto select-none;
 }
+
+.blog-title {
+	view-transition-name: var(--title);
+}

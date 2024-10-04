@@ -17,7 +17,7 @@
 </time>
 
 <article class="prose prose-lg prose-gray dark:prose-invert" id="article">
-	<h2>
+	<h2 class="blog-title" style:--title="blog-{data.post?.attributes.slug}">
 		{data.post?.attributes.title}
 	</h2>
 	<SvelteMarkdown source={data.post?.markdown} />
